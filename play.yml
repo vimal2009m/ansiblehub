@@ -1,0 +1,17 @@
+---
+- hosts:  
+  become: True
+  tasks:
+    - name: Install packages
+      apt:
+        name: "nginx"
+        state: "present"
+    - name: Start nginx server
+      service:
+        name: nginx
+        state: started
+        enabled: True
+    - name: Deploy static website
+      copy:
+        src: index.html
+        dest: /var/www/html/
