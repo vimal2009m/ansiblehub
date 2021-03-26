@@ -1,2 +1,2 @@
 [webservers]
-3.236.252.250 ansible-user=ubuntu
+3.236.252.250 localhost ansible_connection=local ansible-user=ubuntu
