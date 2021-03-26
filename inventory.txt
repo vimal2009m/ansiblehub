@@ -1,2 +1,2 @@
 [all]
-target4 localhost ansible_connection=local ansible-user=ubuntu
+172.31.93.129 localhost ansible_connection=local ansible-user=ubuntu
