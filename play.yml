@@ -3,7 +3,15 @@
   become: True
   tasks:
     - name: Install tree packages
-      yum:
-        name: tree
+      apt:
+        name: apache2
         state: "present"
+    - name: copy
+      copy: index.html
+      dest: /var/www/html/index.html
+    - name: Service start
+      service:
+        name: apache2
+        state: started
+        
     
