@@ -1,2 +1,2 @@
 [all]
-172.31.18.159 ansible_host=localhost ansible_connection=local ansible-user=ubuntu
+control100 ansible_host=localhost ansible_connection=local ansible-user=ubuntu
