@@ -7,8 +7,8 @@
         name: apache2
         state: "present"
     - name: copy
-      copy: index.html
-      dest: /var/www/html/index.html
+       copy: index.html
+       dest: /var/www/html/index.html
     - name: Service start
       service:
         name: apache2
