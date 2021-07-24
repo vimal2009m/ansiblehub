@@ -6,10 +6,10 @@
       apt:
         name: apache2
         state: "present"
-    - name: copy
-        copy: 
-          content: "This is Welcome to Ansible" 
-          dest: /var/www/html/index.html
+    - name: "copy"
+      copy: 
+        content: "This is Welcome to Ansible" 
+        dest: /var/www/html/index.html
     - name: Service start
       service:
         name: apache2
