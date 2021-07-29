@@ -1,2 +1,2 @@
 [all]
-conntrol8 ansible-host=localhost ansible-connection=local ansible_python_interpreter=/usr/bin/python
+192.168.224.178 ansible-host=localhost ansible-connection=local ansible_python_interpreter=/usr/bin/python
