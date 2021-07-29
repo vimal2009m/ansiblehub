@@ -1,2 +1,2 @@
 [all]
-192.168.224.178 ansible-user=jenkins ansible_python_interpreter=/usr/bin/python
+conntrol8 ansible-host=localhost ansible-connection=local ansible-user=jenkins ansible_python_interpreter=/usr/bin/python
