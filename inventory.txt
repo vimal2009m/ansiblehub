@@ -1,2 +1,2 @@
 [all]
-control100 ansible_host=localhost ansible_connection=local ansible-user=ubuntu ansible_python_interpreter=/usr/bin/python
+control100 ansible_host=localhost ansible_connection=local ansible-user=jenkins ansible_python_interpreter=/usr/bin/python
