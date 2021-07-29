@@ -1,2 +1,2 @@
 [all]
-192.168.224.178 ansible-host=localhost ansible-connection=local ansible_python_interpreter=/usr/bin/python
+control100 ansible_host=localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python
