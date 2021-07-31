@@ -2,13 +2,13 @@
 - hosts: all
   become: True
   tasks:
-    - name: Install tree packages
+    - name: Install apache packages
       apt:
         name: apache2
         state: "present"
     - name: "copy"
       copy: 
-        content: "This is Welcome to Ansible" 
+        content: "Ansible Test WebPage"
         dest: /var/www/html/index.html
     - name: Service start
       service:
