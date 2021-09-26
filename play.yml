@@ -8,7 +8,7 @@
         state: "present"
     - name: "copy"
       copy: 
-        content: "Ansible Test WebPage"
+        content: "New Ansible Test WebPage Latest"
         dest: /var/www/html/index.html
     - name: Service start
       service:
