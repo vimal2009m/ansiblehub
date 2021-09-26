@@ -1,2 +1,2 @@
 [all]
-control100 ansible_connection=local
+192.168.224.190
