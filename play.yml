@@ -1,5 +1,5 @@
 ---
-- hosts: weball
+- hosts: all
   become: True
   tasks:
     - name: Install apache packages
