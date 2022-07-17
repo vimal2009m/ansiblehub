@@ -1,2 +1,2 @@
 [all]
-192.168.224.190
+control100 ansible_host=localhost ansible_connection=local
