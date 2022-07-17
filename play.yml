@@ -8,7 +8,7 @@
         state: "present"
     - name: "copy"
       copy: 
-        content: "Welcome to Ansible with Jekins"
+        content: "Welcome to Ansible with Jenkins Hello"
         dest: /var/www/html/index.html
     - name: Service start
       service:
