@@ -1,0 +1,28 @@
+pipeline {
+  agent {
+    kubernetes {
+      yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: twoapp
+spec:
+  containers:
+  - name: twoserver
+    image: vimal2019/twoimage
+    ports:
+    - containerPort: 80
+""" 
+    }
+  }
+  stages {
+    stage('Run maven') {
+      steps {
+        container('twoserver') {
+          sh 'echo hello'
+        }
+      }
+    }
+  }
+}

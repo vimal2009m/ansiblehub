@@ -1,0 +1,41 @@
+pipeline {
+  agent { label 'dockmavenhosts' }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+  }
+  environment {
+    DOCKERHUB_CREDENTIALS = credentials('vimal2019-dockerhub')
+  }
+  stages {
+    stage('Delete') {
+      steps {
+        sh 'rm -rf dock-project2022'
+      }
+    } 
+    stage('Clone') {
+      steps {
+        sh 'git clone https://github.com/vimal2009m/dock-project2022.git'
+      }
+    }  
+    stage('Build') {
+      steps {
+        sh 'docker build -t vimal2019/twoimage -f /home/jenkins/workspace/tt3/dock-project2022/Dockerfile .'
+      }
+    }
+    stage('Login') {
+      steps {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+      }
+    }
+    stage('Push') {
+      steps {
+        sh 'docker push vimal2019/twoimage'
+      }
+    }
+  }
+  post {
+    always {
+      sh 'docker logout'
+    }
+  }
+}
