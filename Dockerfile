@@ -1,5 +1,4 @@
-FROM ubuntu
+FROM nginx
 RUN apt-get update -y
 RUN apt-get install git -y
-RUN mkdir -p /home/jenkins/abc
-CMD ["echo Welcome to Docker"]
+RUN echo "Welcome to Docker" > /usr/share/nginx/html/index.html
